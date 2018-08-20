@@ -16,7 +16,6 @@ jobs:
           command: |
             cd ~/python-ci && nosetests test/math-test.py
       - save_cache:
-          key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
           paths:
             - ".venv"
             - "/usr/local/bin"
